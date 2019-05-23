@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "10"
+dist: trusty
+sudo: false
+
+branches:
+  only:
+    - master
+
+cache:
+  directories:
+    - node_modules
+
+script:
+  - ng lint
+  - npm run test
+
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change
