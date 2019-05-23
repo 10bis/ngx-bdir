@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`mixins test should create an rtl ltr support for dir without encapsulation 1`] = `
+"*[dir=ltr] div {
+  dir: left; }
+
+*[dir=rtl] div {
+  dir: right; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for end (right / left) positioning without encapsulation 1`] = `
+"*[dir=ltr] div {
+  left: 20%; }
+
+*[dir=rtl] div {
+  right: 20%; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for float 1`] = `
+":host-context(*[dir=ltr]) div {
+  float: left; }
+
+:host-context(*[dir=rtl]) div {
+  float: right; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for margin end 1`] = `
+":host-context(*[dir=ltr]) h1 {
+  margin-right: 20px; }
+
+:host-context(*[dir=rtl]) h1 {
+  margin-left: 20px; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for mirroring without encapsulation 1`] = `
+"*[dir=ltr] div {
+  transform: scale(1,1); }
+
+*[dir=rtl] div {
+  transform: scale(-1,1); }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for padding end without encapsulation 1`] = `
+"*[dir=ltr] h1 {
+  padding-right: 20px; }
+
+*[dir=rtl] h1 {
+  padding-left: 20px; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for padding start 1`] = `
+":host-context(*[dir=ltr]) h1 {
+  padding-left: 20px; }
+
+:host-context(*[dir=rtl]) h1 {
+  padding-right: 20px; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for start (left / right) positioning 1`] = `
+":host-context(*[dir=ltr]) div {
+  left: 40px; }
+
+:host-context(*[dir=rtl]) div {
+  right: 40px; }
+"
+`;
+
+exports[`mixins test should create an rtl ltr support for translating  1`] = `
+":host-context(*[dir=ltr]) div {
+  transform: translate(5px,5px); }
+
+:host-context(*[dir=rtl]) div {
+  transform: translate(-5px,5px); }
+"
+`;

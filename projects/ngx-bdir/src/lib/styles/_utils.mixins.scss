@@ -1,0 +1,72 @@
+$dirs: (
+  ltr: (
+    dir: ltr,
+    opposite-dir: rtl,
+    start: left,
+    end: right,
+    transform-dir: 1
+  ),
+  rtl: (
+    dir: rtl,
+    opposite-dir: ltr,
+    start: right,
+    end: left,
+    transform-dir: -1
+  )
+);
+
+@mixin encapsulation($encapsulation, $selector) {
+  @if ($encapsulation) {
+    :host-context(#{$selector}) & {
+      @content;
+    }
+  } @else {
+    #{$selector} & {
+      @content;
+    }
+  }
+}
+
+@mixin property-horizontal-bdir($propery, $value, $encapsulation: true, $start: true, $dirs: $dirs) {
+  @each $key, $map in $dirs {
+    @include encapsulation($encapsulation, '*[dir=#{map_get($map, dir)}]') {
+      @if ($start) {
+        #{$propery}-#{map_get($map, start)}: $value;
+      } @else {
+        #{$propery}-#{map_get($map, end)}: $value;
+      }
+    }
+  }
+}
+
+@mixin value-bdir($propery, $start: true, $encapsulation: true, $dirs: $dirs) {
+  @each $key, $map in $dirs {
+    @include encapsulation($encapsulation, '*[dir=#{map_get($map, dir)}]') {
+      @if ($start) {
+        #{$propery}: map_get($map, start);
+      } @else {
+        #{$propery}: map_get($map, end);
+      }
+    }
+  }
+}
+
+@mixin position-bdir($value, $start, $encapsulation, $dirs: $dirs) {
+  @each $key, $map in $dirs {
+    @include encapsulation($encapsulation, '*[dir=#{map_get($map, dir)}]') {
+      @if ($start) {
+        #{map_get($map, start)}: $value;
+      } @else {
+        #{map_get($map, start)}: $value;
+      }
+    }
+  }
+}
+
+@mixin transform-bdir($prop, $x, $y, $encapsulation: true, $dirs: $dirs) {
+  @each $key, $map in $dirs {
+    @include encapsulation($encapsulation, '*[dir=#{map_get($map, dir)}]') {
+      transform: #{$prop + '(' + $x * map_get($map, transform-dir) + ',' + $y + ')'};
+    }
+  }
+}

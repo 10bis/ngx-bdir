@@ -1,0 +1,45 @@
+@import 'utils.mixins';
+
+@mixin padding-start($padding, $encapsulation: true) {
+  @include property-horizontal-bdir(padding, $padding, $encapsulation);
+}
+
+@mixin padding-end($padding, $encapsulation: true) {
+  @include property-horizontal-bdir(padding, $padding, $encapsulation, false);
+}
+
+@mixin margin-start($margin, $encapsulation: true) {
+  @include property-horizontal-bdir(margin, $margin, $encapsulation);
+}
+
+@mixin margin-end($margin, $encapsulation: true) {
+  @include property-horizontal-bdir(margin, $margin, $encapsulation, false);
+}
+
+@mixin float($start: true, $encapsulation: true) {
+  @include value-bdir(float, $start, $encapsulation);
+}
+
+@mixin dir($start: true, $encapsulation: true) {
+  @include value-bdir(dir, $start, $encapsulation);
+}
+
+@mixin start($value, $encapsulation: true) {
+  @include position-bdir($value, true, $encapsulation);
+}
+
+@mixin end($value, $encapsulation: true) {
+  @include position-bdir($value, false, $encapsulation);
+}
+
+@mixin transformTranslate($x, $y: 0, $encapsulation: true) {
+  @include transform-bdir(translate, $x, $y, $encapsulation);
+}
+
+@mixin transformScale($x, $y: 1, $encapsulation: true, $dirs: $dirs) {
+  @include transform-bdir(scale, $x, $y, $encapsulation);
+}
+
+@mixin mirror($encapsulation: true, $dirs: $dirs) {
+  @include transform-bdir(scale, 1, 1, $encapsulation);
+}
