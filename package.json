@@ -6,7 +6,7 @@
     "build": "ng build ngx-bdir",
     "test": "jest",
     "test:ci": "jest --coverage --ci",
-
+    "test:badges": "npm run test:ci  && jest-coverage-badges",
     "lint": "ng lint",
     "commit": "git-cz",
     "test:watch": "jest --watch"
@@ -20,6 +20,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "core-js": "^2.5.4",
+    "jest-coverage-badges": "^1.1.2",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"

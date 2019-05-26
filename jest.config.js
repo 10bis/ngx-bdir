@@ -3,5 +3,6 @@ module.exports = {
   preset: 'jest-preset-angular',
   roots: ['projects/ngx-bdir'],
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-  transformIgnorePatterns: ['node_modules/(?!(jest-test))']
+  transformIgnorePatterns: ['node_modules/(?!(jest-test))'],
+  coverageReporters: ['json-summary', 'text', 'lcov']
 };

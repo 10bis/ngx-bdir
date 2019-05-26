@@ -14,7 +14,7 @@ cache:
 
 script:
   - ng lint
-  - npm run test:ci
+  - npm run test:badges
 before_install:
   - pip install --user codecov
 after_success:
