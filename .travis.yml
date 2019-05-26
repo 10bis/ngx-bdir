@@ -14,7 +14,7 @@ cache:
 
 script:
   - ng lint
-  - npm run test
+  - npm run test:ci
 before_install:
   - pip install --user codecov
 after_success:
