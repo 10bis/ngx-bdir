@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1558873912427" clover="3.2.0">
+  <project timestamp="1558873912427" name="All files">
+    <metrics statements="48" coveredstatements="48" conditionals="14" coveredconditionals="12" methods="16" coveredmethods="16" elements="78" coveredelements="76" complexity="0" loc="48" ncloc="48" packages="1" files="4" classes="4"/>
+    <file name="bdir.directive.ts" path="/Users/denis/Projects/ngx-bdir/projects/ngx-bdir/src/lib/bdir.directive.ts">
+      <metrics statements="14" coveredstatements="14" conditionals="2" coveredconditionals="2" methods="6" coveredmethods="6"/>
+      <line num="1" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="4" type="stmt"/>
+      <line num="14" count="4" type="stmt"/>
+      <line num="16" count="4" type="stmt"/>
+      <line num="17" count="4" type="stmt"/>
+      <line num="18" count="4" type="stmt"/>
+      <line num="22" count="1" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="27" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="29" count="1" type="stmt"/>
+    </file>
+    <file name="ngx-bdir.models.ts" path="/Users/denis/Projects/ngx-bdir/projects/ngx-bdir/src/lib/ngx-bdir.models.ts">
+      <metrics statements="8" coveredstatements="8" conditionals="4" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <line num="4" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="9" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="14" count="2" type="stmt"/>
+      <line num="16" count="2" type="stmt"/>
+    </file>
+    <file name="ngx-bdir.service.ts" path="/Users/denis/Projects/ngx-bdir/projects/ngx-bdir/src/lib/ngx-bdir.service.ts">
+      <metrics statements="23" coveredstatements="23" conditionals="8" coveredconditionals="6" methods="8" coveredmethods="8"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="2" count="2" type="stmt"/>
+      <line num="3" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="15" count="6" type="stmt"/>
+      <line num="16" count="9" type="cond" truecount="2" falsecount="0"/>
+      <line num="18" count="6" type="stmt"/>
+      <line num="19" count="6" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="1" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
+      <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="33" count="2" type="stmt"/>
+      <line num="34" count="8" type="stmt"/>
+      <line num="37" count="2" type="stmt"/>
+      <line num="38" count="3" type="cond" truecount="1" falsecount="1"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="42" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="2" type="stmt"/>
+    </file>
+    <file name="ngx-bdir.tokens.ts" path="/Users/denis/Projects/ngx-bdir/projects/ngx-bdir/src/lib/ngx-bdir.tokens.ts">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <line num="1" count="2" type="stmt"/>
+      <line num="4" count="2" type="stmt"/>
+      <line num="5" count="2" type="stmt"/>
+    </file>
+  </project>
+</coverage>
