@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "10"
+  - '10'
 dist: trusty
 sudo: false
 
@@ -15,7 +15,10 @@ cache:
 script:
   - ng lint
   - npm run test
-
+before_install:
+  - pip install --user codecov
+after_success:
+  - codecov --file coverage/lcov.info --disable search
 
 notifications:
   email:
