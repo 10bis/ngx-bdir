@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { BdirDirective } from '../bdir.directive';
-import { RTL_LANGUAGES_LIST } from '../ngx-bdir.models';
-import { NgxBdirService } from '../ngx-bdir.service';
-import { RTL_LANGUAGES } from '../ngx-bdir.tokens';
+import { BDirDirective } from '../b-dir.directive';
+import { RTL_LANGUAGES_LIST } from '../b-dir.models';
+import { BDirService } from '../b-dir.service';
+import { RTL_LANGUAGES } from '../b-dir.tokens';
 
 @Component({
   template: `
@@ -21,8 +21,8 @@ describe('BdirDirective', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [TestDirComponent, BdirDirective],
-      providers: [NgxBdirService, { provide: RTL_LANGUAGES, useValue: RTL_LANGUAGES_LIST }]
+      declarations: [TestDirComponent, BDirDirective],
+      providers: [BDirService, { provide: RTL_LANGUAGES, useValue: RTL_LANGUAGES_LIST }]
     }).compileComponents();
     fixture = TestBed.createComponent(TestDirComponent);
     component = fixture.componentInstance;
