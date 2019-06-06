@@ -1,6 +1,6 @@
 {
   "name": "ngx-bdir",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "build": "ng build ngx-bdir",
@@ -8,8 +8,9 @@
     "test:ci": "jest --coverage --ci",
     "test:badges": "npm run test:ci  && jest-coverage-badges",
     "lint": "ng lint",
-    "commit": "git-cz",
-    "test:watch": "jest --watch"
+    "commit": "npx git-cz",
+    "test:watch": "jest --watch",
+    "prepublish": "ng build ngx-bdir && ncp ./projects/ngx-bdir/src/lib/styles ./dist/ngx-bdir/styles"
   },
   "private": true,
   "dependencies": {
@@ -35,17 +36,23 @@
     "@angular/cli": "~7.3.8",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
+    "@types/jest": "^24.0.13",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
     "jest": "24.8.0",
     "jest-preset-angular": "7.1.1",
+    "ncp": "^2.0.0",
     "ng-packagr": "^4.2.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.2.2",
-    "@types/jest": "^24.0.13"
+    "typescript": "~3.2.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }

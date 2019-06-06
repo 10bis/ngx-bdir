@@ -1,17 +1,17 @@
 import { Directive, OnInit, OnDestroy, Input, ElementRef, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Dir, Pos } from './ngx-bdir.models';
-import { NgxBdirService } from './ngx-bdir.service';
+import { Dir, Pos } from './b-dir.models';
+import { BDirService } from './b-dir.service';
 
 @Directive({
   selector: '[bdir]'
 })
-export class BdirDirective implements OnInit, OnDestroy {
+export class BDirDirective implements OnInit, OnDestroy {
   @Input() bdir: Pos = Pos.Start;
 
   private dirSubscription: Subscription;
 
-  constructor(private directionService: NgxBdirService, private element: ElementRef, private renderer: Renderer2) {}
+  constructor(private directionService: BDirService, private element: ElementRef, private renderer: Renderer2) {}
 
   public ngOnInit(): void {
     this.dirSubscription = this.getSubscription().subscribe(dir => {

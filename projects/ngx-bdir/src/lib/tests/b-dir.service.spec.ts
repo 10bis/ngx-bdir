@@ -1,7 +1,7 @@
-import { RTL_LANGUAGES_LIST } from '../ngx-bdir.models';
-import { NgxBdirService } from '../ngx-bdir.service';
+import { RTL_LANGUAGES_LIST } from '../b-dir.models';
+import { BDirService } from '../b-dir.service';
 
-describe('NgxBdirService', () => {
+describe('BDirService', () => {
   const rtlLangs = RTL_LANGUAGES_LIST;
   let directionService;
   beforeEach(() => {
@@ -9,7 +9,7 @@ describe('NgxBdirService', () => {
   });
 
   it('should be created with default lang', () => {
-    directionService = new NgxBdirService(rtlLangs);
+    directionService = new BDirService(rtlLangs);
     const dir$ = directionService.getDir$();
     dir$.subscribe(dir => {
       expect(dir).toEqual('ltr');
@@ -17,7 +17,7 @@ describe('NgxBdirService', () => {
   });
 
   it('should be created with rtl language', () => {
-    directionService = new NgxBdirService(rtlLangs, 'he');
+    directionService = new BDirService(rtlLangs, 'he');
     const dir$ = directionService.getDir$();
     dir$.subscribe(dir => {
       expect(dir).toEqual('rtl');
@@ -25,7 +25,7 @@ describe('NgxBdirService', () => {
   });
 
   it('should set language to rtl lang', () => {
-    directionService = new NgxBdirService(rtlLangs);
+    directionService = new BDirService(rtlLangs);
     directionService.setLang('he');
     const dir$ = directionService.getDir$();
     dir$.subscribe(dir => {
@@ -34,7 +34,7 @@ describe('NgxBdirService', () => {
   });
 
   it('should be give the opposite language', () => {
-    directionService = new NgxBdirService(rtlLangs);
+    directionService = new BDirService(rtlLangs);
     const dir$ = directionService.getOppositeDir$();
     dir$.subscribe(dir => {
       expect(dir).toEqual('rtl');

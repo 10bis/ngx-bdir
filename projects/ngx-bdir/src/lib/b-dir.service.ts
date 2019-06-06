@@ -1,13 +1,11 @@
 import { Injectable, Inject, Optional } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Dir, Lang, DEFAULT_LANGUAGE } from './ngx-bdir.models';
-import { RTL_LANGUAGES, DEFAULT_LANG } from './ngx-bdir.tokens';
+import { Dir, Lang, DEFAULT_LANGUAGE } from './b-dir.models';
+import { RTL_LANGUAGES, DEFAULT_LANG } from './b-dir.tokens';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class NgxBdirService {
+@Injectable()
+export class BDirService {
   private currentDir;
   private currentDir$: BehaviorSubject<Dir>;
 
