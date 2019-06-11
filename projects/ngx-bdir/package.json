@@ -1,6 +1,8 @@
 {
   "name": "ngx-bdir",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "description": "A bidirectional support library for angular",
+  "homepage": "https://github.com/10bis/ngx-bdir#readme",
   "keywords": [
     "Angular",
     "bdir",
@@ -11,5 +13,11 @@
   "peerDependencies": {
     "@angular/common": "^7.2.0",
     "@angular/core": "^7.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/10bis/ngx-bdir.git"
+  },
+  "license": "MIT",
+  "sideEffects": false
 }
