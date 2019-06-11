@@ -1,8 +1,9 @@
 {
   "name": "ngx-bdir",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "scripts": {
     "ng": "ng",
+    "release": "npx standard-version",
     "build": "ng build ngx-bdir",
     "test": "jest",
     "test:ci": "jest --coverage --ci",
