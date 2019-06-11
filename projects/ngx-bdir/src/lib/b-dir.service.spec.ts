@@ -1,7 +1,6 @@
-import { TestBed } from '@angular/core/testing';
-import { Language } from './b-dir.models';
 import { BDirService } from './b-dir.service';
-import { RTL_LANGUAGES } from './b-dir.tokens';
+import { Direction } from './b-dir.models';
+import { of } from 'rxjs';
 describe('BDirService', () => {
   let service: BDirService;
   beforeEach(() => {
@@ -10,18 +9,18 @@ describe('BDirService', () => {
   it('can load instance', () => {
     expect(service).toBeTruthy();
   });
-  describe('setLang', () => {
+  describe('setLang should call setDir', () => {
     it('makes expected calls', () => {
-      spyOn(service, 'setDir').and.callThrough();
+      const spy = spyOn(service, 'setDir');
       service.setLang('en');
-      expect(service.setDir).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled();
     });
   });
-  describe('getOppositeDir$', () => {
+  describe('getOppositeDir$ should call getDir$', () => {
     it('makes expected calls', () => {
-      spyOn(service, 'getDir$').and.callThrough();
-      service.getOppositeDir$();
-      expect(service.getDir$).toHaveBeenCalled();
+      const spy = spyOn(service, 'getDir$').and.returnValue(of(Direction.Ltr));
+      service.getOppositeDir$().subscribe();
+      expect(spy).toHaveBeenCalled();
     });
   });
 });
