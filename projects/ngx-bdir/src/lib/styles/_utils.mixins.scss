@@ -57,7 +57,7 @@ $dirs: (
       @if ($start) {
         #{map_get($map, start)}: $value;
       } @else {
-        #{map_get($map, start)}: $value;
+        #{map_get($map, end)}: $value;
       }
     }
   }

@@ -11,10 +11,10 @@ exports[`mixins test should create an rtl ltr support for dir without encapsulat
 
 exports[`mixins test should create an rtl ltr support for end (right / left) positioning without encapsulation 1`] = `
 "*[dir=ltr] div {
-  left: 20%; }
+  right: 20%; }
 
 *[dir=rtl] div {
-  right: 20%; }
+  left: 20%; }
 "
 `;
 
