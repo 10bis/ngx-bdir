@@ -36,10 +36,10 @@
   @include transform-bdir(translate, $x, $y, $encapsulation);
 }
 
-@mixin transformScale($x, $y: 1, $encapsulation: true, $dirs: $dirs) {
+@mixin transformScale($x, $y: 1, $encapsulation: true) {
   @include transform-bdir(scale, $x, $y, $encapsulation);
 }
 
-@mixin mirror($encapsulation: true, $dirs: $dirs) {
+@mixin mirror($encapsulation: true) {
   @include transform-bdir(scale, 1, 1, $encapsulation);
 }

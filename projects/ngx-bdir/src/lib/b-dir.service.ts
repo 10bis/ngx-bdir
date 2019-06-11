@@ -1,12 +1,12 @@
 import { Injectable, Inject, Optional } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Direction, Language, DEFAULT_LANGUAGE } from './b-dir.models';
 import { RTL_LANGUAGES, DEFAULT_LANG } from './b-dir.tokens';
 
 @Injectable()
 export class BDirService {
-  private currentDir;
+  private currentDir: Direction;
   private currentDir$: BehaviorSubject<Direction>;
 
   constructor(
@@ -17,26 +17,38 @@ export class BDirService {
     this.currentDir$ = new BehaviorSubject(this.currentDir);
   }
 
-  setLang(lang: Language) {
+  /**
+   * Setting the current language which will determine the direction value.
+   */
+  setLang(lang: Language): void {
     this.setDir(this.getDirByLang(lang));
   }
 
-  setDir(dir) {
+  /**
+   * Set the current direction value.
+   */
+  setDir(dir: Direction): void {
     if (dir !== this.currentDir) {
       this.currentDir = dir;
       this.currentDir$.next(dir);
     }
   }
 
-  getDir$() {
+  /**
+   * get the current direction value as observable.
+   */
+  getDir$(): Observable<Direction> {
     return this.currentDir$.asObservable();
   }
 
-  getOppositeDir$() {
+  /**
+   * get the opposite direction value as observable.
+   */
+  getOppositeDir$(): Observable<Direction> {
     return this.getDir$().pipe(map(dir => (dir === Direction.Rtl ? Direction.Ltr : Direction.Rtl)));
   }
 
-  private getDirByLang(lang: Language) {
+  private getDirByLang(lang: Language): Direction {
     return this.rtlLangs.includes(lang) ? Direction.Rtl : Direction.Ltr;
   }
 }
