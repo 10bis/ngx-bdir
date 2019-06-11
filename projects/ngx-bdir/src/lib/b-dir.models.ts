@@ -1,16 +1,16 @@
 // An ISO639-1 Lang code standard.
-export type Lang = string;
+export type Language = string;
 
-export enum Dir {
+export enum Direction {
   Rtl = 'rtl',
   Ltr = 'ltr'
 }
 
-export enum Pos {
+export enum Position {
   Start = 'start',
   End = 'end'
 }
 
-export const DEFAULT_LANGUAGE: Lang = 'en';
+export const DEFAULT_LANGUAGE: Language = 'en';
 
-export const RTL_LANGUAGES_LIST: Lang[] = ['he', 'ar', 'hy', 'dv', 'ff', 'ku', 'fa'];
+export const RTL_LANGUAGES_LIST: Language[] = ['he', 'ar', 'hy', 'dv', 'ff', 'ku', 'fa'];

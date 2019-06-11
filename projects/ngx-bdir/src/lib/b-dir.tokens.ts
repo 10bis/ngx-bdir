@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { Lang } from './b-dir.models';
+import { Language } from './b-dir.models';
 
-export const RTL_LANGUAGES = new InjectionToken<Lang[]>('Rtl Languages');
-export const DEFAULT_LANG = new InjectionToken<Lang>('Default Lang');
+export const RTL_LANGUAGES = new InjectionToken<Language[]>('Rtl Languages');
+export const DEFAULT_LANG = new InjectionToken<Language>('Default Lang');

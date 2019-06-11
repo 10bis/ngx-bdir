@@ -1,13 +1,13 @@
 import { Directive, OnInit, OnDestroy, Input, ElementRef, Renderer2 } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Dir, Pos } from './b-dir.models';
+import { Direction, Position } from './b-dir.models';
 import { BDirService } from './b-dir.service';
 
 @Directive({
   selector: '[bdir]'
 })
 export class BDirDirective implements OnInit, OnDestroy {
-  @Input() bdir: Pos = Pos.Start;
+  @Input() bdir: Position = Position.Start;
 
   private dirSubscription: Subscription;
 
@@ -24,6 +24,6 @@ export class BDirDirective implements OnInit, OnDestroy {
   }
 
   private getSubscription() {
-    return this.bdir === Pos.Start ? this.directionService.getDir$() : this.directionService.getOppositeDir$();
+    return this.bdir === Position.Start ? this.directionService.getDir$() : this.directionService.getOppositeDir$();
   }
 }
