@@ -72,6 +72,15 @@ exports[`mixins test should create an rtl ltr support for start (left / right) p
 "
 `;
 
+exports[`mixins test should create an rtl ltr support for text alignment 1`] = `
+":host-context(*[dir=ltr]) div {
+  text-align: left; }
+
+:host-context(*[dir=rtl]) div {
+  text-align: right; }
+"
+`;
+
 exports[`mixins test should create an rtl ltr support for translating  1`] = `
 ":host-context(*[dir=ltr]) div {
   transform: translate(5px,5px); }

@@ -101,4 +101,14 @@ describe('mixins test', () => {
     const css = setup(source);
     expect(css).toMatchSnapshot();
   });
+
+  it('should create an rtl ltr support for text alignment', () => {
+    const source = `
+      div {
+        @include text-align(start);
+      }
+    `;
+    const css = setup(source);
+    expect(css).toMatchSnapshot();
+  });
 });

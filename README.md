@@ -112,6 +112,8 @@ install with npm:
 
 `dir($start: true, $encapsulation: true)`
 
+`text-align($start: true, $encapsulation: true)`
+
 `start($value, $encapsulation: true)`
 
 `end($value, $encapsulation: true)`

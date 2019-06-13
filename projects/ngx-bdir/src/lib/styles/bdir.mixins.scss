@@ -24,6 +24,10 @@
   @include value-bdir(dir, $start, $encapsulation);
 }
 
+@mixin text-align($start: true, $encapsulation: true) {
+  @include value-bdir(text-align, $start, $encapsulation);
+}
+
 @mixin start($value, $encapsulation: true) {
   @include position-bdir($value, true, $encapsulation);
 }
