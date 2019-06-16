@@ -71,8 +71,8 @@ install with npm:
 
 ## API
 
-####BDirService
-#####Methods:
+#### BDirService
+##### Methods:
 *`setLang(lang: Lang)` - Setting the current language which will determine the direction value
 
 *`setDir(dir: Direction)` - Set the current direction value.
@@ -81,19 +81,19 @@ install with npm:
 
 *`setLang(lang: Lang)` - Get the opposite direction value as observable.
 
-####BDirDirective
+#### BDirDirective
 `bdir: 'start' | 'end'` - Will set a `dir` attribute to the hosting element with `rtl | ltr` value accordingly `start`, is the default value.
 ```angular2html
   <element bdir="start"></element>
 ```
 
-####Tokens
+#### Tokens
 `RTL_LANGUAGES` - Define which language will consider as `rtl` languages, default value: `['he', 'ar', 'hy', 'dv', 'ff', 'ku', 'fa']`.
 
 `DEFAULT_LANG` - Define the default language, default value: `'en'`
 
 
-####Mixins
+#### Mixins
 >All `mixins` were written following to the `css` syntax, simply change **left** & **right** with **start** & **end**.
 
 >Also the `mixins` were developed in a way that the transpiled code will be as minimal as possible.
